@@ -1,0 +1,38 @@
+# Módulos npm instalados
+/node_modules
+
+# Archivos y directorios generados por npm
+npm-debug.log
+package-lock.json
+.pnp
+.pnp.js
+.pnpm-debug.log
+pnpm-lock.yaml
+
+# Archivos generados por IDEs y editores
+.vscode/
+.idea/
+*.suo
+*.ntvs_analysis.dat
+*.suo
+*.user
+*.sln.docstates
+
+# Directorio de compilación
+/dist
+
+# Logs
+/logs
+
+# Archivos de entorno (por ejemplo, .env)
+.env
+
+# Configuraciones locales
+*.local.json
+
+# Otros archivos generados
+*.log
+*.seed
+*.pid
+*.out
+*.dump
