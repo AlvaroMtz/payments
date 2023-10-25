@@ -3,25 +3,28 @@ import { type PaymentProvider } from '../PaymentProvider'
 describe('PaymentProvider', () => {
   it('should have the correct name', () => {
     const provider: PaymentProvider = {
+      id: 'test',
       name: 'Stripe',
-      isActive: true
+      enable: true
     }
     expect(provider.name).toBe('Stripe')
   })
 
   it('should be active with isActive set to true', () => {
     const provider: PaymentProvider = {
+      id: 'test',
       name: 'PayPal',
-      isActive: true
+      enable: true
     }
-    expect(provider.isActive).toBe(true)
+    expect(provider.enable).toBe(true)
   })
 
   it('should be inactive with isActive set to false', () => {
     const provider: PaymentProvider = {
+      id: 'test',
       name: 'MercadoPago',
-      isActive: false
+      enable: false
     }
-    expect(provider.isActive).toBe(false)
+    expect(provider.enable).toBe(false)
   })
 })

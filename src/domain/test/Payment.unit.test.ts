@@ -2,8 +2,8 @@ import { type Payment, PaymentStatus, type CustomerInfo } from '../Payment'
 
 describe('Payment', () => {
   const customer: CustomerInfo = {
-    name: 'John Doe',
-    email: 'john@example.com'
+    name: 'Test',
+    email: 'test@test.com'
   }
 
   const payment: Payment = {
@@ -13,13 +13,14 @@ describe('Payment', () => {
     customerInfo: customer,
     status: PaymentStatus.Completed,
     provider: {
-      name: 'Stripe',
-      isActive: true
+      id: 'test',
+      name: 'PaymentGatewayOne',
+      enable: true
     }
   }
 
   it('should have the correct customer name', () => {
-    expect(payment.customerInfo.name).toBe('John Doe')
+    expect(payment.customerInfo.name).toBe('Test')
   })
 
   it('should have the correct payment status', () => {
@@ -27,10 +28,10 @@ describe('Payment', () => {
   })
 
   it('should have the correct provider name', () => {
-    expect(payment.provider.name).toBe('Stripe')
+    expect(payment.provider.name).toBe('PaymentGatewayOne')
   })
 
   it('should be active with the isActive property set to true', () => {
-    expect(payment.provider.isActive).toBe(true)
+    expect(payment.provider.enable).toBe(true)
   })
 })

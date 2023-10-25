@@ -1,5 +1,6 @@
 export interface PaymentProvider {
+  id: string
   name: string
-  isActive: boolean
+  enable: boolean
   // Other properties
 }
